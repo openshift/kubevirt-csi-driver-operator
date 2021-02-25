@@ -271,8 +271,8 @@ rules:
     - update
     - create
 - apiGroups: [""]
-  resources: ["configmaps", "endpoints"]
-  verbs: ["get", "list", "watch", "update", "create", "delete"]
+  resources: ["configmaps"]
+  verbs: ["get"]
 - apiGroups: ["machine.openshift.io"]
   resources: ["machinesets"]
   verbs: ["list"]

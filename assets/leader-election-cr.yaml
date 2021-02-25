@@ -1,8 +1,0 @@
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRole
-metadata:
-  name: openshift:csi-driver-controller-leader-election
-rules:
-  - apiGroups: [""]
-    resources: ["configmaps", "endpoints"]
-    verbs: ["get", "list", "watch", "update", "create", "delete"]

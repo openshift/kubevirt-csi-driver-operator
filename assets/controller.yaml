@@ -26,8 +26,8 @@ spec:
           effect: "NoSchedule"
       containers:
         - name: csi-driver
-          imagePullPolicy: Always
           image: ${DRIVER_IMAGE}
+          imagePullPolicy: IfNotPresent
           args:
             - "--endpoint=$(CSI_ENDPOINT)"
             - "--namespace=kubevirt-csi-driver"
@@ -68,6 +68,7 @@ spec:
               cpu: 10m
         - name: csi-provisioner
           image: ${PROVISIONER_IMAGE}
+          imagePullPolicy: IfNotPresent
           args:
             - --csi-address=$(ADDRESS)
             - --default-fstype=ext4
@@ -80,6 +81,7 @@ spec:
               mountPath: /var/lib/csi/sockets/pluginproxy/
         - name: csi-attacher
           image: ${ATTACHER_IMAGE}
+          imagePullPolicy: IfNotPresent
           args:
             - --csi-address=$(ADDRESS)
             - --v=5
@@ -95,6 +97,7 @@ spec:
               cpu: 10m
         - name: csi-liveness-probe
           image: ${LIVENESS_PROBE_IMAGE}
+          imagePullPolicy: IfNotPresent
           args:
             - --csi-address=/csi/csi.sock
             - --probe-timeout=3s

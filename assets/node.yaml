@@ -10,6 +10,8 @@ spec:
       app: kubevirt-csi-driver
   updateStrategy:
     type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 10%
   template:
     metadata:
       labels:

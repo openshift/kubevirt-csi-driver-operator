@@ -75,8 +75,6 @@ spec:
               memory: 50Mi
               cpu: 10m
         - name: csi-node-driver-registrar
-          securityContext:
-            privileged: true
           image: ${NODE_DRIVER_REGISTRAR_IMAGE}
           args:
             - --csi-address=$(ADDRESS)

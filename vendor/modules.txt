@@ -30,9 +30,6 @@ github.com/evanphx/json-patch
 github.com/getsentry/raven-go
 # github.com/ghodss/yaml v1.0.0
 github.com/ghodss/yaml
-# github.com/go-bindata/go-bindata v3.1.2+incompatible
-github.com/go-bindata/go-bindata
-github.com/go-bindata/go-bindata/go-bindata
 # github.com/go-logr/logr v0.2.0
 github.com/go-logr/logr
 # github.com/go-openapi/jsonpointer v0.19.3
@@ -43,7 +40,7 @@ github.com/go-openapi/jsonreference
 github.com/go-openapi/spec
 # github.com/go-openapi/swag v0.19.5
 github.com/go-openapi/swag
-# github.com/gogo/protobuf v1.3.1
+# github.com/gogo/protobuf v1.3.1 => github.com/gogo/protobuf v1.3.2
 github.com/gogo/protobuf/gogoproto
 github.com/gogo/protobuf/proto
 github.com/gogo/protobuf/protoc-gen-gogo/descriptor
@@ -144,15 +141,6 @@ github.com/openshift/api/template
 github.com/openshift/api/template/v1
 github.com/openshift/api/user
 github.com/openshift/api/user/v1
-# github.com/openshift/build-machinery-go v0.0.0-20200713135615-1f43d26dccc7
-github.com/openshift/build-machinery-go
-github.com/openshift/build-machinery-go/make
-github.com/openshift/build-machinery-go/make/lib
-github.com/openshift/build-machinery-go/make/targets
-github.com/openshift/build-machinery-go/make/targets/golang
-github.com/openshift/build-machinery-go/make/targets/openshift
-github.com/openshift/build-machinery-go/make/targets/openshift/operator
-github.com/openshift/build-machinery-go/scripts
 # github.com/openshift/library-go v0.0.0-20200723181926-829d4689a31f
 github.com/openshift/library-go/pkg/config/client
 github.com/openshift/library-go/pkg/config/configdefaults
@@ -240,7 +228,7 @@ go.uber.org/zap/internal/bufferpool
 go.uber.org/zap/internal/color
 go.uber.org/zap/internal/exit
 go.uber.org/zap/zapcore
-# golang.org/x/crypto v0.0.0-20200220183623-bac4c82f6975
+# golang.org/x/crypto v0.0.0-20200622213623-75b288015ac9
 golang.org/x/crypto/cryptobyte
 golang.org/x/crypto/cryptobyte/asn1
 golang.org/x/crypto/internal/subtle
@@ -248,7 +236,7 @@ golang.org/x/crypto/nacl/secretbox
 golang.org/x/crypto/poly1305
 golang.org/x/crypto/salsa20/salsa
 golang.org/x/crypto/ssh/terminal
-# golang.org/x/net v0.0.0-20200602114024-627f9648deb9
+# golang.org/x/net v0.0.0-20201021035429-f5854403a974
 golang.org/x/net/context
 golang.org/x/net/context/ctxhttp
 golang.org/x/net/http/httpguts
@@ -261,9 +249,9 @@ golang.org/x/net/websocket
 # golang.org/x/oauth2 v0.0.0-20191202225959-858c2ad4c8b6
 golang.org/x/oauth2
 golang.org/x/oauth2/internal
-# golang.org/x/sync v0.0.0-20190911185100-cd5d95a43a6e
+# golang.org/x/sync v0.0.0-20201020160332-67f06af15bc9
 golang.org/x/sync/singleflight
-# golang.org/x/sys v0.0.0-20200622214017-ed371f2e16b4
+# golang.org/x/sys v0.0.0-20200930185726-fdedc70b468f
 golang.org/x/sys/cpu
 golang.org/x/sys/internal/unsafeheader
 golang.org/x/sys/unix

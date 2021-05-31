@@ -40,7 +40,10 @@ func NewOperatorCommand() *cobra.Command {
 		Use:   "kubevirt-csi-driver-operator",
 		Short: "OpenShift KubeVirt CSI Driver Operator",
 		Run: func(cmd *cobra.Command, args []string) {
-			cmd.Help()
+			err := cmd.Help()
+			if err != nil {
+				fmt.Fprintf(os.Stderr, "%v\n", err)
+			}
 			os.Exit(1)
 		},
 	}

@@ -27,8 +27,8 @@ spec:
           securityContext:
             privileged: true
             allowPrivilegeEscalation: true
-          imagePullPolicy: Always
           image: ${DRIVER_IMAGE}
+          imagePullPolicy: IfNotPresent
           args:
             - "--endpoint=unix:/csi/csi.sock"
             - "--namespace=kubevirt-csi-driver"
@@ -76,6 +76,7 @@ spec:
               cpu: 10m
         - name: csi-node-driver-registrar
           image: ${NODE_DRIVER_REGISTRAR_IMAGE}
+          imagePullPolicy: IfNotPresent
           args:
             - --csi-address=$(ADDRESS)
             - --kubelet-registration-path=$(DRIVER_REG_SOCK_PATH)
@@ -100,6 +101,7 @@ spec:
               cpu: 5m
         - name: csi-liveness-probe
           image: ${LIVENESS_PROBE_IMAGE}
+          imagePullPolicy: IfNotPresent
           args:
             - --csi-address=/csi/csi.sock
             - --probe-timeout=3s
